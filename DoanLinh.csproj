@@ -3180,8 +3180,6 @@
     <Content Include="Areas\Admin\Views\SliderImage\Create.cshtml" />
     <Content Include="Areas\Admin\Views\SliderImage\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\SliderImage\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Contact\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Contact\Details.cshtml" />
     <EntityDeploy Include="Context\dbModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>dbModel.Designer.cs</LastGenOutput>
@@ -3193,11 +3191,8 @@
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Single.cshtml" />
-    <Content Include="Views\Home\Register.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Tintuc.cshtml" />
     <Content Include="Views\Home\ChuongTrinhDaoTao.cshtml" />
-    <Content Include="Views\Home\GioiThieu.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
