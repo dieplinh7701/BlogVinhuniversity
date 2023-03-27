@@ -1,0 +1,377 @@
+﻿@*@model WebApplication1.Models.HomeModel*@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="~/Content/images/logoDHV.png" type="image/x-icon" />
+    <title>VINH UNIVERSITY</title>
+    <link href="//fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link href="~/Content/css/style-starter.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+    <!-- top header -->
+    <section class="w3l-top-header">
+        <div class="container">
+            <div class="top-header-2">
+                <div class="d-grid main-top">
+                    <div class="top-headers">
+                        
+                    </div>
+                    <div class="myacount" style="padding:10px 0">
+                            @if (Session["UserId"] != null)
+                            {
+                               <a href="@Url.Action("Index","Admin/Home")"><i class="fa fa-user mr-2" aria-hidden="true"></i>Trang quản trị</a>
+                               <a href="@Url.Action("Logout","Home")"><i class="fa fa-sign-in mr-2 ml-2" aria-hidden="true"></i>Đăng xuất</a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("Login","Home")"><i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i>Đăng nhập </a>
+                                <a href="@Url.Action("Register","Home")"><i class="fa fa-user-plus mr-2 ml-2" aria-hidden="true"></i>Đăng ký</a>
+                            }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //top header -->
+    <header id="site-header" class="fixed-top">
+        <section class="w3l-header-4">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <h1>
+                        <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                            <img src="~/Content/images/logoDHV.png" style="width:50px;he"/>
+                              VINH UNIVERSITY
+                        </a>
+                    </h1>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa icon-expand fa-bars"></span>
+                        <span class="fa icon-close fa-times"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index","Home")">Trang chủ </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Tintuc","Home")">Tin Tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("ChuongTrinhDaoTao","Home")">Đào tạo</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("GioiThieu","Home")">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
+                            </li>
+                            @*<li class="nav-item ">
+                                <a class="nav-link" href="https://dieplinh7701.github.io/group4/?fbclid=IwAR3pkFmlh8sw0ed7MdD3q8Y3PcBIT9kcjuDwwQevQg1Sw5FZykruA3b6OoE">About</a>
+                            </li>*@
+                        </ul>
+                       @* <ul class="navbar-nav search-right mt-lg-0 mt-2">
+                            <li class="nav-item mr-2" title="Search">
+                                <a href="#search" class="btn search-search">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>*@
+
+                        <!-- //toggle switch for light and dark theme -->
+                        <!-- search popup -->
+                        <div id="search" class="pop-overlay">
+                            <div class="popup">
+                                <form action="error.html" method="GET" class="d-flex">
+                                    <input type="search" placeholder="Search.." name="search" required="required" autofocus>
+                                    <button type="submit"><span class="fa fa-search"></span></button>
+                                    <a class="close" href="#close">&times;</a>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /search popup -->
+                    </div>
+                    <!-- toggle switch for light and dark theme -->
+                    <div class="mobile-position">
+                        <nav class="navigation">
+                            <div class="theme-switch-wrapper">
+                                <label class="theme-switch" for="checkbox">
+                                    <input type="checkbox" id="checkbox">
+                                    <div class="mode-container">
+                                        <i class="gg-sun"></i>
+                                        <i class="gg-moon"></i>
+                                    </div>
+                                </label>
+                            </div>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <!-- BODY-->
+    <div> @RenderBody()</div>
+    <!-- footer -->
+    <section class="w3l-footer-29-main">
+        <div class="footer-29 py-5">
+            <div class="container py-lg-4">
+                <div class="row footer-top-29">
+                    <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
+                        <div class="footer-logo mb-4">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="~/Content/images/logoDHV.png" style="width:50px;height:50px" />
+                                VINH UNIVERSITY
+                            </a>
+                        </div>
+                        <p>
+                            Trường Đại học Vinh trở thành đại học thông minh,
+                            xếp hạng tốp 500 đại học hàng đầu châu Á vào năm 2030, hướng đến tốp 1000 đại học hàng đầu thế giới vào năm 2045.
+                        </p>
+                        <div class="main-social-footer-29 mt-4">
+                            <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                            <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                            <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                            <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
+
+                        <ul>
+                            <h6 class="footer-title-29">CÁC CƠ SỞ</h6>
+
+                            <p>
+                                Cơ sở 1: 182 Lê Duẩn, TP. Vinh, Nghệ An <br />
+                                Cơ sơ 2: Xã Nghi Ân (TP. Vinh) và Xã Nghi Phong (Huyện Nghi Lộc), Nghệ An<br />
+                                Cơ sở 3: Xã Đan Trường, huyện Nghi Xuân, Hà Tĩnh<br />
+                                Cơ sở 4: Thị trấn Hưng Nguyên, huyện Hưng Nguyên, Nghệ An<br />
+                                Cơ sở 5: Phường Hưng Bình, TP. Vinh, Nghệ An<br />
+                            </p>
+                         
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
+                        <h6 class="footer-title-29">LIÊN HỆ </h6>
+                        <p>Địa chỉ: 182 Lê Duẩn - Thành phố Vinh - tỉnh Nghệ An</p>
+                        <p class="mt-2">Điện thoại: (0238)3855.452 - Fax: (0238)3855.269</p>
+                        <p class="mt-2">Homepage: https://vinhuni.edu.vn</p>
+                        <p class="mt-2">Email: vinhuni@vinhuni.edu.vn</p>
+                        <p class="mt-2">Chịu trách nhiệm nội dung: GS.TS. Nguyễn Huy Bằng - Hiệu trưởng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <section class="w3l-copyright text-center">
+            <div class="container">
+                <p class="copy-footer-29">
+                    © 2021 Excellence. All rights reserved. Design by <a href="https://w3layouts.com/"
+                                                                         target="_blank">
+                        W3Layouts
+                    </a>
+                </p>
+            </div>
+
+            <!-- move top -->
+            <button onclick="topFunction()" id="movetop" title="Go to top">
+                &#10548;
+            </button>
+            <script>
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function () {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("movetop").style.display = "block";
+                    } else {
+                        document.getElementById("movetop").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+            <!-- /move top -->
+        </section>
+        <!-- //copyright -->
+    </section>
+    <!-- //footer -->
+    <!--  javascripts file here -->
+
+    <script src="~/Content/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/js/theme-change.js"></script>
+    <script src="~/Content/js/jquery-1.9.1.min.js"></script>
+    <!-- faq -->
+    <script>
+        const items = document.querySelectorAll(".accordion button");
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+    <!-- //faq -->
+
+    <script src="~/Content/js/easyResponsiveTabs.js"></script>
+    <!--Plug-in Initialisation-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Horizontal Tab
+            $('#parentHorizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true, // 100% fit in a container
+                tabidentify: 'hor_1', // The tab groups identifier
+                activate: function (event) { // Callback function if tab is switched
+                    var $tab = $(this);
+                    var $info = $('#nested-tabInfo');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+        });
+    </script>
+
+    <!-- owl carousel -->
+    <script src="~/Content/js/owl.carousel.js"></script>
+    <!-- script for banner slider-->
+    <script>
+        $(document).ready(function () {
+            $('.owl-one').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    480: {
+                        items: 1
+                    },
+                    667: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script -->
+    <!-- owl carousel -->
+    <!-- script for customers -->
+    <script>
+        $(document).ready(function () {
+            $('.owl-three').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                dots: false,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 3,
+                        nav: true
+                    },
+                    480: {
+                        items: 3,
+                        nav: true
+                    },
+                    667: {
+                        items: 3,
+                        nav: true
+                    },
+                    800: {
+                        items: 4,
+                        nav: true
+                    },
+                    1000: {
+                        items: 5,
+                        nav: true
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //customers owlcarousel -->
+    <!-- disable body scroll which navbar is in active -->
+    <!-- <script>
+      $(function () {
+        $('.navbar-toggler').click(function () {
+          $('body').toggleClass('noscroll');
+        })
+      });
+    </script> -->
+    <!-- disable body scroll which navbar is in active -->
+    <!--/MENU-JS-->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!--//MENU-JS-->
+
+    <script src="~/Content/js/bootstrap.min.js"></script><!-- //bootstrap js -->
+
+</body>
+
+</html>
