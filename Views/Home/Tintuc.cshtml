@@ -1,0 +1,287 @@
+﻿@model WebApplication1.Models.HomeModel
+@{
+    ViewBag.Title = "Tintuc";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<div class="BackgroundHeader" style="position:relative;margin-bottom:20px">
+    <img src="~/Content/images/backgroundlayout.jpg" style=" max-width: 100%; height: auto; " />
+    <div class="content-henders" style="background-color: rgba(0, 0, 0, 0.4); position: absolute; width: 100%; bottom: 0px;">
+        <div style="color:white;font-size:25px">
+            <div id="clock"></div>
+        </div>
+    </div>
+</div>
+@*CONTENT*@
+<section class="my-4">
+    <div class="container">
+        <div class="col-lg-12 stretch-card grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <a href="/Home/Single/2">
+                            <div class="row m-2">
+                                <div class="col-sm-4 grid-margin">
+                                    <div class="position-relative">
+                                        <div class="rotate-img">
+                                            <img src="/Content/images/anh1.jpg" alt="thumb" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex my-1">
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8  grid-margin">
+                                    <h2 class="mb-2 font-weight-600">
+                                        Hội nghị đại biểu viên chức, người lao đ...
+                                    </h2>
+                                    <div class="fs-13 mb-2">
+                                        <span class="mr-2"><i class="ion-calendar"></i> 12/31/2022 12:00:00 AM</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Thực hiện các quy định của Nhà nước về thực hiện dân chủ, Quy chế dân chủ của Trường Đại học Vinh; Kế hoạch năm 2022 và Kế hoạch l...
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Home/Single/3">
+                            <div class="row m-2">
+                                <div class="col-sm-4 grid-margin">
+                                    <div class="position-relative">
+                                        <div class="rotate-img">
+                                            <img src="/Content/images/anh2.jpg" alt="thumb" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex my-1">
+
+                                            <div class="badge-positioned mx-2">
+                                                <span class="badge badge-danger font-weight-bold">NEW</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8  grid-margin">
+                                    <h2 class="mb-2 font-weight-600">
+                                        Sôi động, hấp dẫn Cuộc thi Tìm kiếm ý tư...
+                                    </h2>
+                                    <div class="fs-13 mb-2">
+                                        <span class="mr-2"><i class="ion-calendar"></i> 12/28/2022 12:00:00 AM</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Thực hiện Kế hoạch về việc tổng kết hoạt động giảng dạy các học phần dạy học dựa vào dự án và tổ chức cuộc thi “Tìm kiếm ý tưởng, ...
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Home/Single/4">
+                            <div class="row m-2">
+                                <div class="col-sm-4 grid-margin">
+                                    <div class="position-relative">
+                                        <div class="rotate-img">
+                                            <img src="/Content/images/anh3.jpg" alt="thumb" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex my-1">
+
+                                            <div class="badge-positioned mx-2">
+                                                <span class="badge badge-danger font-weight-bold">NEW</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8  grid-margin">
+                                    <h2 class="mb-2 font-weight-600">
+                                        Trường Đại học Vinh tổ chức Hội nghị Bí ...
+                                    </h2>
+                                    <div class="fs-13 mb-2">
+                                        <span class="mr-2"><i class="ion-calendar"></i> 12/20/2022 12:00:00 AM</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Thực hiện chương trình công tác năm 2022, ngày 19/12/2022, Trường Đại học Vinh tổ chức Hội nghị Bí thư, Lớp trưởng các lớp sinh vi...
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Home/Single/5">
+                            <div class="row m-2">
+                                <div class="col-sm-4 grid-margin">
+                                    <div class="position-relative">
+                                        <div class="rotate-img">
+                                            <img src="/Content/images/anh4.png" alt="thumb" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex my-1">
+
+                                            <div class="badge-positioned">
+                                                <span class="badge badge-danger font-weight-bold">HOT</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8  grid-margin">
+                                    <h2 class="mb-2 font-weight-600">
+                                        Trường Đại học Vinh tổ chức Hội nghị côn...
+                                    </h2>
+                                    <div class="fs-13 mb-2">
+                                        <span class="mr-2"><i class="ion-calendar"></i> 12/15/2022 12:00:00 AM</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Thực hiện chương trình công tác năm 2022, ngày 15/12/2022, Trường Đại học Vinh tổ chức Hội nghị công tác đảm bảo An ninh trật tự t...
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Home/Single/6">
+                            <div class="row m-2">
+                                <div class="col-sm-4 grid-margin">
+                                    <div class="position-relative">
+                                        <div class="rotate-img">
+                                            <img src="/Content/images/anh5.jpg" alt="thumb" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex my-1">
+
+                                            <div class="badge-positioned">
+                                                <span class="badge badge-danger font-weight-bold">HOT</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8  grid-margin">
+                                    <h2 class="mb-2 font-weight-600">
+                                        Gặp mặt Câu lạc bộ Hiệu trưởng các trườn...
+                                    </h2>
+                                    <div class="fs-13 mb-2">
+                                        <span class="mr-2"><i class="ion-calendar"></i> 12/10/2022 12:00:00 AM</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Ngày 10/12/2022, thực hiện chương trình hoạt động thường niên, Câu lạc bộ Hiệu trưởng các trường đại học sư phạm tổ chức Gặp mặt n...
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Home/Single/7">
+                            <div class="row m-2">
+                                <div class="col-sm-4 grid-margin">
+                                    <div class="position-relative">
+                                        <div class="rotate-img">
+                                            <img src="/Content/images/anh6.jpg" alt="thumb" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex my-1">
+
+                                            <div class="badge-positioned">
+                                                <span class="badge badge-danger font-weight-bold">HOT</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8  grid-margin">
+                                    <h2 class="mb-2 font-weight-600">
+                                        Hội thảo khoa học quốc gia "Đào tạo, bồi...
+                                    </h2>
+                                    <div class="fs-13 mb-2">
+                                        <span class="mr-2"><i class="ion-calendar"></i> 12/11/2022 12:00:00 AM</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Trong các ngày 10/12 đến 11/12/2022, Trường Đại học Vinh đã tổ chức Hội thảo khoa học quốc gia "Đào tạo, bồi dưỡng giáo viên tiểu ...
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Home/Single/8">
+                            <div class="row m-2">
+                                <div class="col-sm-4 grid-margin">
+                                    <div class="position-relative">
+                                        <div class="rotate-img">
+                                            <img src="/Content/images/anh8.jpg" alt="thumb" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex my-1">
+
+                                            <div class="badge-positioned mx-2">
+                                                <span class="badge badge-danger font-weight-bold">NEW</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8  grid-margin">
+                                    <h2 class="mb-2 font-weight-600">
+                                        Hội đồng trường thông qua Chiến lược phá...
+                                    </h2>
+                                    <div class="fs-13 mb-2">
+                                        <span class="mr-2"><i class="ion-calendar"></i> 12/18/2022 12:00:00 AM</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Thực hiện Quy chế làm việc, Nghị quyết số 03/NQ-HĐT ngày 23/3/2022 của Hội đồng trường về Kế hoạch tổ chức các kỳ họp, hội nghị, h...
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Home/Single/9">
+                            <div class="row m-2">
+                                <div class="col-sm-4 grid-margin">
+                                    <div class="position-relative">
+                                        <div class="rotate-img">
+                                            <img src="/Content/images/anh7.jpg" alt="thumb" class="img-fluid">
+                                        </div>
+                                        <div class="d-flex my-1">
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8  grid-margin">
+                                    <h2 class="mb-2 font-weight-600">
+                                        Hội nghị toàn quốc nghiên cứu, học tập N...
+                                    </h2>
+                                    <div class="fs-13 mb-2">
+                                        <span class="mr-2"><i class="ion-calendar"></i> 12/5/2022 12:00:00 AM</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Trong 2 ngày 5/12 - 6/12/2022, thực hiện Chương trình công tác năm 2022, Bộ Chính trị, Ban Bí thư tổ chức Hội nghị toàn quốc nghiê...
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    @*TIME*@
+    let time = document.getElementById("clock");
+    time.addEventListener("load", clock);
+    function clock() {
+        let date = new Date();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        let mm = date.getMilliseconds();
+        let sess = "Am";
+
+        if (h === 0) {
+            h = 12;
+        }
+        if (h > 12) {
+            h = h - 12;
+            sess = "Pm";
+        }
+        if (s === 60) {
+            s = 0;
+        }
+
+        h = h < 10 ? "0" + h : h;
+
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+        let clock = h + ":" + m + ":" + s + " " + sess;
+        time.innerHTML = clock;
+    }
+
+    clock();
+    setInterval(clock, 1000);
+</script>

@@ -1,0 +1,172 @@
+﻿@model WebApplication1.Context.Contact
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section>
+        <div class="content">
+            <div>
+                <div class="container">
+                    <div class="contact-parent">
+                        <div class="contact-child child1" style="position:relative">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i> Địa chỉ <br />
+                                <span>
+                                    182 Lê Duẩn - Thành phố Vinh - tỉnh Nghệ An
+                                    <br />
+                                    
+                                </span>
+                            </p>
+
+                            <p>
+                                <i class="fas fa-phone-alt"></i> Số điện thoại <br />
+                                <span> (0238)3855.452</span>
+                            </p>
+
+                            <p>
+                                <i></i> Email <br />
+                                <span>vinhuni@vinhuni.edu.vn</span>
+                            </p>
+
+                        </div>
+
+                        <div class="contact-child child2">
+                            <div class="inside-contact">
+                                <h2>Contact Us <i class="ion-android-contacts mx-1"></i></h2>
+                                <h3>
+                                    <span id="confirm">
+                                </h3>
+
+                                <p>Tên *</p>
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+                                <p>Email *</p>
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                                <p>Điện thoại *</p>
+                                <input id="txt_phone" type="text" Required="required">
+
+                                <p>Ngày gửi *</p>
+                                @Html.EditorFor(model => model.ModifiedBy, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                                @Html.ValidationMessageFor(model => model.ModifiedBy, "", new { @class = "text-danger" })
+
+                                <p>Message *</p>
+                                @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+                                <input type="submit" id="btn_send" value="SEND">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+    <style>
+        .contact-parent {
+            display: flex;
+            margin: 80px 0;
+        }
+
+        .contact-child {
+            display: flex;
+            flex: 1;
+            box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+        }
+
+        .child1 {
+            background: linear-gradient(#395e74, rgba(0,0,0,0.7)), url("/Content/images/contact3.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: #fff;
+            padding: 100px 0;
+        }
+
+            .child1 p {
+                padding-left: 20%;
+                font-size: 20px;
+                text-shadow: 0px 0px 2px #000;
+            }
+
+                .child1 p span {
+                    font-size: 16px;
+                    color: #9df2fd;
+                }
+
+        .child2 {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .inside-contact {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+            .inside-contact h2 {
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .inside-contact h3 {
+                text-align: center;
+                font-size: 16px;
+                color: #0085e2;
+            }
+
+            .inside-contact input, .inside-contact textarea {
+                width: 100%;
+                background-color: #eee;
+                border: 1px solid rgba(0,0,0,0.48);
+                padding: 5px 10px;
+                margin-bottom: 20px;
+            }
+
+                .inside-contact input[type=submit] {
+                    background-color: #000;
+                    color: #fff;
+                    transition: 0.2s;
+                    border: 2px solid #000;
+                    margin: 30px 0;
+                }
+
+                    .inside-contact input[type=submit]:hover {
+                        background-color: #fff;
+                        color: #000;
+                        transition: 0.2s;
+                    }
+
+        screen and (max-width:991px) {
+            .contact-parent
+
+        {
+            display: block;
+            width: 100%;
+        }
+
+        .child1 {
+            display: none;
+        }
+
+        .child2 {
+            background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("/Content/images/contact.jpg");
+            background-size: cover;
+        }
+
+        .inside-contact input, .inside-contact textarea {
+            background-color: #fff;
+        }
+        }
+    </style>
